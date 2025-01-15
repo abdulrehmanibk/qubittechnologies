@@ -6,7 +6,7 @@ const Footer = () => {
     <>
     <div className="ft_container">
         {/* <p>th<span>E</span> seve<span>N</span> sk<span>Y</span> o<span>F</span> soft<span>S</span></p> */}
-        <p>Qubit Technologies by Ibrahim Trading Company SPC</p>
+        <p>Qubit Technologies</p>
     </div>
     </>
   );
