@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    scroll-behavior: smooth;
+
+}
+html:focus-within{
+    scroll-behavior: smooth !important;
+}
+html{
+    scroll-behavior: smooth;
+}
+.first_container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-left: 2.5%; */
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    /* border: 0.1rem solid black; */
+    padding: 2.5rem;
+    gap: .5rem;
+    margin-top: 2.5rem;
+    /* background-color: #184E70; */
+}
+.fright img{
+    /* border: 0.1rem solid black; */
+    width: 100%;
+    /* height: 100%; */
+    transition: 1.5s;
+    object-fit: fill;
+}
+.fleft h2{
+    margin-top: 2rem;
+    font-size: 3.5rem;
+    /* background: linear-gradient(to right, #46dccf,#ff2d75); */
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: #184E70;
+}
+.fleft p{
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color:  #00675e;
+    
+}
+.fleft p span{
+    color: #184E70;
+    font-size: 2.5rem;
+    font-weight: 200;
+    font-weight: 500;
+}
+.fleft button{
+    border: none;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600    ;
+    padding: .5rem 1rem;
+    outline: none;
+    letter-spacing: 0.1rem;
+    color: #184E70;
+    cursor: pointer;
+    border-radius: .5rem;
+    /* border: 0.2rem solid #ff2d75; */
+    background-color: transparent;
+    transition: 0.4s;
+    box-shadow: .1rem .1rem 1rem .1rem #00000060;
+
+}
+.fleft button:hover{
+    transform: scale(1.1);
+
+}
+
+@media (min-width: 1166px) {
+   .fleft{
+    /* border: 0.2rem solid ; */
+    width: 50%;
+    height: auto;
+    backdrop-filter: blur(10px);
+    /* background-color: #1b17523d; */
+    
+   }
+   .fright{
+    /* border: 0.1rem solid black; */
+    width: 45%;
+    align-items: center;
+    justify-content: center;
+   }
+}
+.fleft{
+    animation: animate1 2.5s;
+}
+@keyframes animate1{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity:0 ;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.fright{
+    animation: animate2 2.5s;
+    /* animation: bounce_first 2.5s infinite; */
+}
+
+@keyframes animate2{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity:0 ;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+/* @keyframes bounce_first{
+    0%{
+        height: 100%;
+    }
+    50%{
+        transform: translateY(5%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+} */
+@media (min-width: 768px) and (max-width: 1165px) {
+
+    .fleft{
+        /* border: 0.2rem solid ; */
+        width: 100%;
+        height: auto;
+        backdrop-filter: blur(10px);
+        /* background-color: #1b17523d; */
+       }
+       .fright{
+        width: 100%;
+        /* border :0.1rem solid black */
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+       }
+    }
+@media (max-width: 768px) {
+    .fleft{
+    backdrop-filter: blur(10px);
+    }
+    .fleft h2{
+        font-size: 2.5rem;
+    }
+    .fleft p{
+        font-size: 1.5rem;
+    }
+    .fleft p span{
+        font-size: 2rem;
+    }
+    .fleft button{
+        font-size: 1rem;
+    }
+
+}
+@media (max-width: 343px) {
+    .fleft{
+    backdrop-filter: blur(10px);
+    }
+    .fleft h2{
+        font-size: 2.3rem;
+    }
+    .fleft p{
+        font-size: 1.3rem;
+    }
+    .fleft p span{
+        font-size: 1.8rem;
+    }
+    .fleft button{
+        font-size: .9rem;
+    }
+
+}

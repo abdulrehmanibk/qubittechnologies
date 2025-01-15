@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bubbles{
+    position: absolute;
+    display: flex;
+}
+.bubbles span{
+    width: 30px !important;
+    height: 30px !important;
+    background-color: #00675e;
+    margin: 0 7px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #00675e42,
+    0 0 50px #00675e,
+    0 0 100px #00675e;
+    animation: animate var(--i) linear infinite;
+    /* animation-duration: calc(10s*var(--i) / var(--i)); */
+}
+.bubbles span:nth-child(even){
+    background-color: #184E70;
+    box-shadow: 0 0 0 10px #184e7042,
+    0 0 50px #184E70,
+    0 0 100px #184E70;
+    animation: animate7 var(--i) linear infinite;
+
+}
+@keyframes animate{
+    0%{
+        transform: translateY(100vh) scale(0.2);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes animate7{
+    0%{
+        transform: translateY(-10vh) scale(0.2);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+
+    }
+}

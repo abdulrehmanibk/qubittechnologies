@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace
+}
+.scards{
+    width: 95%;
+    margin-left: 2.5%;
+    /* border: 0.1rem solid green; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+}
+.card{
+    width: 22rem;
+    /* border: 0.1rem solid black;  */
+    text-align: center;
+    /* background-color: #4fc3dc; */
+    backdrop-filter: blur(5px);
+    box-shadow: .1rem .1rem 1rem .1rem #00000060;
+    border-radius:.5rem;
+    /* border:0.13rem solid #201b61bd; */
+    transition: .7s;
+    margin-bottom: 1rem;    
+    padding: 1rem;
+    border-radius: 1rem;
+    
+}
+.card h3{
+    font-size: 2rem;
+    padding: .5rem;
+    /* color:  lightgray; */
+    color: grey;
+    letter-spacing: 1px;
+
+    
+}
+.card p{
+    font-size: 1.7rem;
+    margin-top: .5rem;
+    color:rgb(116, 116, 116);
+    /* font-weight: 600; */
+    letter-spacing: 1px;
+    padding: .2rem;
+
+
+
+}
+.card:nth-child(odd){
+    /* border:0.13rem solid  #ff2d75 */
+}
+.card:nth-child(even) p,.card:nth-child(even) h3{
+    color:#00675e;
+}
+.card:nth-child(odd) p,.card:nth-child(odd) h3{
+    color:#184E70;
+    
+}
+
+.card:hover{
+transform: scale(1.05);
+cursor: pointer;
+}
+
+.sheading{
+    width: 95%;
+    margin-left: 2.5%;
+    font-size: 2rem;
+    color: darkgray;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: monospace;
+    backdrop-filter: blur(10px);
+
+}
+
+
+
+.scards, .sheading{
+    animation: animate0 2.5s;
+    /* animation-timeline: view(); */
+}
+@keyframes animate0{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity:0 ;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+/* @keyframes animate0{
+    0%{
+        opacity: 0;
+        
+    }
+    20%{
+        opacity: 0.5;
+        
+    }
+    100%{
+        opacity: 1;
+        
+    }
+    
+} */
+
+
+/* @media (min-width: 1150px) {
+    
+} */
+/* @media (min-width: 768px) and (max-width: 1149px) {
+    
+} */
+ @media (max-width: 777px) {
+     .card{
+        width: 90%;
+     }
+     .card h3{
+        font-size: 1.5rem;   
+    }
+    .card p{
+        font-size: 1.2rem;
+    }
+    .sheading{
+        font-size: 1.5rem;
+    }
+ 
+ }
